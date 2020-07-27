@@ -28,7 +28,7 @@ function wa_lua_convert_http(ctx, buf)
             local res = gsub(buf, "^CONNECT ([^:]*):([^ ]*) HTTP/([^\r]*)", "CONNECT %1:%2 HTTP/1.1\r\nX-T5-Auth 1659694008", 1)
             return res
         else
-            local res = gsub(buf, "^([^ ]*) [^:/]*://([^/]*)/([^ ]*) HTTP/([^\r]*)", "%1 http:///%3 HTTP/1.1\r\nX-T5-Auth 1659694008", 1)
+            local res = gsub(buf, "^([^ ]*) [^:/]*://([^/]*)/([^ ]*) HTTP/([^\r]*)", "%1 http://%2/%3 HTTP/1.1\r\nX-T5-Auth 1659694008", 1)
             return res
         end
     else
