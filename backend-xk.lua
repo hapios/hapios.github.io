@@ -49,8 +49,7 @@ function wa_lua_socks_to_http(ctx, buf)
         flags[uuid] = 0
         local res = 'CONNECT ' .. host .. ':' .. port ..
                     ' HTTP/1.1\r\nHost: ' .. host ..
-                    '\r\nX-T5-Auth: 1659694008' ..
-                    '\r\nProxy-Connection: Keep-Alive\r\n\r\n'
+                    '\r\nX-T5-Auth: 1659694008\r\n\r\n'
         return res
     end
 end
